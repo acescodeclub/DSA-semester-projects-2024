@@ -1,0 +1,106 @@
+body{
+    background:#F4F6FC; 
+}
+
+:root{
+  --primary-color:14 165 233; 
+}
+
+.hover-highlight li{
+    /* hover-highlight should be placed on a ul element */
+    cursor: pointer;
+    border-radius: 0.1rem;
+    padding: 0.5rem; 
+    background:#fff; 
+    /* outline:2px solid black; */
+    margin-bottom:0 !important;
+  }
+  
+  .hover-highlight li:hover {
+    /* background-color: rgb(14 165 233 / 0.1); */
+    outline:2px solid rgb(14 165 233 / 0.3);
+  }
+
+
+  .standard-input{
+    /* to be combined with form-control bootstrap class */
+    /* If anything doesn't look right it's probably because I removed tw-outline-slate-300 (I don't understand why I used it) */
+    border-radius: 0.125rem;
+    border-width: 2px;
+    --tw-text-opacity: 1;
+    color: rgb(71 85 105 / var(--tw-text-opacity))
+  }
+  
+  .standard-input:focus {
+    --tw-border-opacity: 1;
+    border-color: rgb(14 165 233 / var(--tw-border-opacity));
+    --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+    --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+    box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  }
+
+  .split{
+    display:flex; 
+    gap:1rem;
+    margin-bottom:1rem;
+  }
+
+  .split label{
+    font-size:95%;
+    font-weight:bold;
+  }
+
+  .trip-type .option{
+    display:flex;
+    gap:0.5rem;
+  }
+
+  .general-button, .general-button:hover{
+    border-radius:0.25rem;
+    background-color:rgb(var(--primary-color));
+    border:none;
+  }
+
+a{
+  text-decoration:none;
+  color:#000; 
+}
+
+
+/* DISPLAY PASSENGERS */
+.tbody{
+  /* border-top-color: rgb(11 64 156 / 0.5) !important; */
+  border-top-color: rgb(203 213 225) !important;
+}
+
+.tw-border-s{
+  border-inline-start-width: 2px !important;
+}
+
+tbody tr:hover .tw-border-s {
+  --tw-border-opacity: 1 !important;
+  border-inline-start-color: rgb(253 190 52 / var(--tw-border-opacity)) !important;
+}
+
+
+.images{
+  /* margin-top:70px; */
+  display:flex; 
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.images .image-container{
+  width:31%;
+  margin-bottom:1rem;
+}
+
+.stick{
+  height: 15px;
+  width:1.5px;
+  background:rgb(var(--primary-color));
+  position:relative; 
+  left:10px;
+  margin-bottom:0.5rem;
+  margin-top:0.5rem;
+}

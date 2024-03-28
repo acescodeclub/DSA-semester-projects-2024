@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base-preflight.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <style>
+        @font-face {
+            font-family: "Poppins-Regular";
+            src: url("./fonts/Poppins-Regular.ttf");
+        }
+
+        .menu li{
+            padding:0.5rem;
+            margin-bottom:1rem;
+        }
+
+        .menu li .header{
+            margin-bottom:0.5rem;
+            display:flex;
+            gap:0.5rem;
+            align-items:center;
+        }
+
+        .menu li .header-text{
+            font-weight: bold;
+        }
+
+        .menu li:hover svg{
+            fill: rgb(14 165 233 / 1) !important; 
+        }
+
+        body{
+            font-family:"Poppins-Regular";
+        }
+
+    </style>
+</head>
+<body>
+    <!-- sidebar -->
+    <nav class="sidebar close shadow" id="sidebar">
+    </nav>
+    
+    <main class="px-5 mt-5" id="main" style="width:calc(100% - 70px); position:relative; left:70px;">        
+        <h1 class="mb-4">G-13 AIRLINES</h1>
+        <ul class="menu hover-highlight p-0">
+            <li class="shadow-sm">
+                <a href="ticket-reservation.html">
+                    <div class="header">
+                        <span class="header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-ticket-perforated-fill" viewBox="0 0 16 16">
+                                <path d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6zm4-1v1h1v-1zm1 3v-1H4v1zm7 0v-1h-1v1zm-1-2h1v-1h-1zm-6 3H4v1h1zm7 1v-1h-1v1zm-7 1H4v1h1zm7 1v-1h-1v1zm-8 1v1h1v-1zm7 1h1v-1h-1z"/>
+                              </svg>
+                       </span>
+                        <span class="header-text">
+                            RESERVE A TICKET
+                        </span>
+                    </div>
+                </a>
+            </li>
+            <div class="stick"></div>
+            <li class="shadow-sm">
+                <a href="cancel-reservation.html">
+                    <div class="header">
+                        <span class="header-icon">
+                            <svg fill="#000000" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>cancel</title> <path d="M10.771 8.518c-1.144 0.215-2.83 2.171-2.086 2.915l4.573 4.571-4.573 4.571c-0.915 0.915 1.829 3.656 2.744 2.742l4.573-4.571 4.573 4.571c0.915 0.915 3.658-1.829 2.744-2.742l-4.573-4.571 4.573-4.571c0.915-0.915-1.829-3.656-2.744-2.742l-4.573 4.571-4.573-4.571c-0.173-0.171-0.394-0.223-0.657-0.173v0zM16 1c-8.285 0-15 6.716-15 15s6.715 15 15 15 15-6.716 15-15-6.715-15-15-15zM16 4.75c6.213 0 11.25 5.037 11.25 11.25s-5.037 11.25-11.25 11.25-11.25-5.037-11.25-11.25c0.001-6.213 5.037-11.25 11.25-11.25z"></path> </g></svg>
+                        </span>
+                        <span class="header-text">CANCEL RESERVATION</span>
+                    </div>
+                </a>
+            </li>
+            <div class="stick"></div>
+            <li class="shadow-sm">
+                <a href="search-reservation.html">
+                    <div class="header">
+                        <span class="header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path></svg>
+                       
+                        </span>
+                        <span class="header-text">SEARCH RESERVATION</span>
+                    </div>
+                </a>
+            </li>
+            <div class="stick"></div>
+            <li class="shadow-sm">
+                <a href="#" onclick="displayPassengers()">
+                    <div class="header">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.5 12c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm1.5 1H8c-3.309 0-6 2.691-6 6v1h15v-1c0-3.309-2.691-6-6-6z"></path><path d="M16.604 11.048a5.67 5.67 0 0 0 .751-3.44c-.179-1.784-1.175-3.361-2.803-4.44l-1.105 1.666c1.119.742 1.8 1.799 1.918 2.974a3.693 3.693 0 0 1-1.072 2.986l-1.192 1.192 1.618.475C18.951 13.701 19 17.957 19 18h2c0-1.789-.956-5.285-4.396-6.952z"></path></svg>
+                       
+                        </span>
+                        <span class="header-text">DISPLAY PASSENGERS</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </main>
+   
+    <script src="./js/app.js"></script>
+</body>
+</html>

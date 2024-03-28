@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/base-preflight.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
+    <style>
+        @font-face {
+            font-family: "Poppins-Regular";
+            src: url("./fonts/Poppins-Regular.ttf");
+        }
+     
+        body{
+            font-family:"Poppins-Regular";
+        }
+
+    
+    </style>
+    <title>Document</title>
+</head>
+<body>
+   <nav class="sidebar close shadow" id="sidebar">
+   </nav>
+     <!-- Flight booking form -->
+     <form class="px-5 mt-5" id="reservation-form" style="width:calc(100% - 70px); position:relative; left:70px;">
+        <h1 class="mb-4">TICKET RESERVATION</h1>
+        <div class="bg-white p-3 shadow-sm" style="border-radius:0.25rem;">
+            <div class="split">
+                <div class="flex-grow-1">
+                    <label for="">Name</label>
+                    <input type="text" id="name" required class="form-control standard-input" style="text-transform:capitalize;">
+                </div>
+                <div class="flex-grow-1">
+                    <label for="">Phone Number</label>
+                    <input type="text" id="phone-number" required class="form-control standard-input">
+                </div>
+            </div>
+            <div class="split">
+                <div class="flex-grow-1">
+                    <label for="">Email Address</label>
+                    <input type="email" id="email-address" required class="form-control standard-input" style="text-transform:lowercase;">
+                </div>
+            </div>
+            <div class="split">
+                <div class="flex-grow-1">
+                    <label for="">Choose Password</label>
+                    <input type="password" id="choose-password" required class="form-control standard-input" oninput="checkPassword()">
+                </div>
+                <div class="flex-grow-1">
+                    <label for="">Confirm Password</label>
+                    <input type="password" id="confirm-password" required class="form-control standard-input" oninput="checkPassword()">
+                </div>
+            </div>
+
+            <div class="py-3">
+                <p class="text-muted text-center">NOTE: This password will help you be able to cancel a reservation so keep it safe</p>
+            </div>
+            <div class="split">
+                <div class="flex-grow-1">
+                    <label for="">From</label>
+                    <input type="text" value="KNUST" disabled class="form-control standard-input bg-white">
+                </div>
+                <div class="flex-grow-1">
+                    <label for="">To</label>
+                    <input type="text" value="CIVIL AVIATION" disabled class="form-control standard-input bg-white">
+                </div>
+            </div>
+            <!-- <div class="split">
+                <div class="flex-grow-1">
+                    <label for="">Date of Birth</label>
+                    <input type="date" id="date-of-birth" required class="form-control standard-input">
+                </div>
+            </div> -->
+            <div class="mt-3">
+                <button type="button" class="btn btn-primary shadow-sm general-button" onclick="pushDetails()">
+                    <span>Reserve Ticket</span>
+                </button>
+                <button type="submit" class="visually-hidden" id="false-submit">
+                    False submit button
+                </button>
+        </div>
+    </form>
+<!-- 
+  -->
+
+    
+      
+      <!-- modal -->
+    <div class="modal fade" tabindex="-1" id="exampleModal">
+        <div class="modal-dialog  modal-dialog-centered">
+          <div class="modal-content border-0" style="background:transparent;">
+            <div>
+                <div class="alert alert-success text-center fw-bold d-flex gap-2 justify-content-center">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m10 15.586-3.293-3.293-1.414 1.414L10 18.414l9.707-9.707-1.414-1.414z"></path></svg></span>
+                    <span>Reservation Successful</span>
+                </div>
+                 
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="card border-0 p-2">
+                        <div class="fw-bold mb-2 text-center" style="text-decoration:underline; text-underline-offset:5px;">RESERVATION DETAILS</div>
+                        <div id="reservation-details">
+
+                        </div>
+                         <div>
+                            <button type="button" class="btn btn-primary general-button" data-bs-dismiss="modal">Ok</button>
+                         </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="visually-hidden">
+                <button type="button" class="btn btn-primary" id="success-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Launch demo modal
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="./js/app.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
