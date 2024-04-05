@@ -176,6 +176,7 @@ const reservationTemplate = {};
 
 const reservationSuccessful = (reservation)=>{
     const resDetailsLocation = document.getElementById("reservation-details");
+    resDetailsLocation.innerHTML = "";
     const htmlContent = `
     <div class="d-flex gap-2 mb-2">
     <span class="text-muted">NAME</span>
@@ -329,7 +330,7 @@ if(showPassengerList(appSettings)){
 const searchReservations = () => {
     // sequential search
     const displayLocation = document.getElementById("display-location"); // where the search appears in the html
-    displayLocation.innerHTML = " "; // clear previous search results
+    displayLocation.innerHTML = ""; // clear previous search results
     const query = document.getElementById("search-input").value; // query from the search input
     const filter = document.getElementById("filter").value; // filter we are searching by (name, email, id, ....)
     const matches = new LinkedList(); // new linked list to collect matches
